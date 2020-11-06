@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="../dist/canvasjscharts-shadow.js"></script>
+<script type="text/javascript">
+
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartContainer", {
+	title:{
+		text: "CanvasJS Column Chart with Shadow Effect"              
+	},
+	shadowEnabled: true, //Disable by setting it to false
+	shadowStyle: {
+		color: "black",
+		offsetX: 4,
+		offsetY: 0,
+		blurWidth: 4
+	},
+	data: [{
+		type: "column",
+		dataPoints: [
+			{ label: "apple",  y: 10  },
+			{ label: "orange", y: 15  },
+			{ label: "banana", y: 25  },
+			{ label: "mango",  y: 30  },
+			{ label: "grape",  y: 28  }
+		]
+	}]
+});
+chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 360px; max-width: 920px; margin: 0px auto;"></div>
+</body>
+</html>

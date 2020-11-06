@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light2",
+	title:{
+		text: "Most Popular Social Networking Sites"
+	},
+	axisX: {
+		title: "Social Network",
+		reversed: true,
+	},
+	axisY: {
+		title: "Monthly Active Users",
+		includeZero: true,
+		labelFormatter: this.addSymbols
+	},
+	shadowEnabled: true, //Disable by setting it to false
+	shadowStyle: {
+		color: "black",
+		offsetX: 0,
+		offsetY: 2,
+		blurWidth: 4
+	},
+	data: [{
+		type: "bar",
+		dataPoints: [
+			{ y:  2200000000, label: "Facebook" },
+			{ y:  1800000000, label: "YouTube" },
+			{ y:  800000000, label: "Instagram" },
+			{ y:  563000000, label: "Qzone" },
+			{ y:  376000000, label: "Weibo" },
+			{ y:  336000000, label: "Twitter" },
+			{ y:  330000000, label: "Reddit" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 360px; max-width: 920px; margin: 0px auto;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="../dist/canvasjscharts-shadow.js"></script>
+</body>
+</html>
