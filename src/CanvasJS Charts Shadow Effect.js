@@ -14,13 +14,13 @@
 	  this.shadowStyle.offsetX = !isNullOrUndefined(this.options.shadowStyle) && !isNullOrUndefined(this.options.shadowStyle.offsetX) ? this.options.shadowStyle.offsetX : 4;
 	  this.shadowStyle.offsetY = !isNullOrUndefined(this.options.shadowStyle) && !isNullOrUndefined(this.options.shadowStyle.offsetY) ? this.options.shadowStyle.offsetY : 0;
 	  this.shadowStyle.color = !isNullOrUndefined(this.options.shadowStyle) && !isNullOrUndefined(this.options.shadowStyle.color) ? this.options.shadowStyle.color : "black"; 
-	  this.shadowStyle.blurWidth = !isNullOrUndefined(this.options.shadowStyle) && !isNullOrUndefined(this.options.shadowStyle.blurWidth) ? this.options.shadowStyle.blurWidth : 4; 
+	  this.shadowStyle.blurLevel = !isNullOrUndefined(this.options.shadowStyle) && !isNullOrUndefined(this.options.shadowStyle.blurLevel) ? this.options.shadowStyle.blurLevel : 4; 
 	}
 
 	CanvasJS.Chart.prototype.addShadow = function() {
 	  var chart = this;
 
-	  chart.ctx.shadowBlur = chart.shadowStyle.blurWidth;
+	  chart.ctx.shadowBlur = chart.shadowStyle.blurLevel;
 	  chart.ctx.shadowOffsetX = chart.shadowStyle.offsetX;
 	  chart.ctx.shadowOffsetY = chart.shadowStyle.offsetY;
 	  chart.ctx.shadowColor = chart.shadowStyle.color;  
