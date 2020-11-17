@@ -23,5 +23,5 @@ You can add shadow-effect to following chart types in CanvasJS Charts.
 * Box & Whisker Chart
 
 **Note:**
-* Plugin was last tested with CanvasJS v3.2GA
+* Plugin was last tested with CanvasJS Chart v3.2.3GA
 * This plugin requires you to have CanvasJS License. Please visit [CanvasJS](https://canvasjs.com/license/) for more info.
